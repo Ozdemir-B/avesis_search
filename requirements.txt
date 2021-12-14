@@ -1,0 +1,4 @@
+scholarly
+flask==2.0.2
+tinydb==4.5.2
+#jupyter

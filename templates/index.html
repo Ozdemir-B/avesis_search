@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+      <style>
+        body {
+          
+        }
+        
+    </style>
+    <script language="javascript">
+      
+    </script>
+  </head>
+  <body style="background-color:black;">
+    <br><br><br><br><br><br><br><br>
+    <center>
+      <h3 id="p1" style="color:white;font-family: 'Quicksand';font-size: 100px;"> {{head}} </h3>
+      
+      
+      <p id ="p2" style="color:#c5c5c6;font-family: 'Quicksand';font-size:37px;">{{name}} </p>
+      <form method="POST",action="{{url_for('home')}}">
+      
+        <input type = "text" id="inputUrl"  name="inputUrl"></input>
+        <input type = "submit" value="enter keyword">
+      </form>
+
+
+      <hr size="3" noshade color="grey">
+      
+      <br><br>
+      {% for r in data %}
+      <br>
+      <p id ="p3" style="color:#c5c5c6;font-family: 'Quicksand';font-size:20px;">{{r}} : %{{data[r]}} </p>
+      {% endfor %}
+      
+      
+    </center>
+  </body>
+</html>
