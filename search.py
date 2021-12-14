@@ -1,4 +1,3 @@
-import whoosh
 import re
 #this file is just for searching text(couple of words) in a dictionary that full of texts.
 
