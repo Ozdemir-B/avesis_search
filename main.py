@@ -217,7 +217,7 @@ def home2(keyword):
 
 
         
-@app.route("/home",methods=["GET","POST"])
+@app.route("/",methods=["GET","POST"])
 def home():
     head = "Avesis Search"
     name = "Kocaeli Üniversitesi"
