@@ -1,42 +1,56 @@
 
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-      <style>
-        body {
-          
-        }
-        
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Avesis mavesis</title>
+
+    <style>
+      
+      html, body {
+        font-family: 'Roboto Mono', monospace;
+      }
+
     </style>
-    <script language="javascript">
-      
-    </script>
+
   </head>
-  <body style="background-color:black;">
-    <br><br><br><br><br><br><br><br>
-    <center>
-      <h3 id="p1" style="color:white;font-family: 'Quicksand';font-size: 100px;"> {{head}} </h3>
-      
-      
-      <p id ="p2" style="color:#c5c5c6;font-family: 'Quicksand';font-size:37px;">{{name}} </p>
-      <form method="POST",action="{{url_for('home')}}">
-      
-        <input type = "text" id="inputUrl"  name="inputUrl"></input>
-        <input type = "submit" value="enter keyword">
-      </form>
+  <body>
+    <div class="w-100">
+        <div class="text-center bg-success text-light p-3">
+          <h1 class="display-1">Kocaeli Üniversitesi</h3>
+          <h2 class="display-2 mt-4">Avesis Search</h3>
+        </div>
 
+        <div class="col-sm-4 col-m-4 m-auto mt-5 ">
+          <form method="POST" action="{{url_for('home')}}">
+            <div class="d-flex">
+              <input type="text" class="form-control" name="inputUrl" placeholder="neural network" aria-describedby="emailHelp">
+              <button type="submit" class="btn btn-primary mx-2">Submit</button>
+            </div>
+            
+          </form>
+        </div>
 
-      <hr size="3" noshade color="grey">
-      
-      <br><br>
-      {% for r in data %}
-      <br>
-      <p id ="p3" style="color:#c5c5c6;font-family: 'Quicksand';font-size:20px;">{{r}} : %{{data[r]}} </p>
-      {% endfor %}
-      
-      
-    </center>
+        <div class="col-sm-6 col-md-6 col-lg-4 m-auto mt-5 ">
+          <ul class="list-group  d-flex">
+            {% for r in data %}
+              <li class="list-group-item d-flex flex-row justify-content-between">{{r}} <span class="badge bg-success">{{ data[r] }}</span></li>
+            {% endfor %}
+          </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
   </body>
 </html>
