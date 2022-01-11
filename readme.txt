@@ -1,3 +1,1 @@
--> source run main.py
-
--> source activate
+-> page displays at /home
